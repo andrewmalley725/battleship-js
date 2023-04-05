@@ -40,7 +40,6 @@ export default function Game(props) {
         }
         setMsg(mst);
         setUpdate(!update);
-        console.log(msg);
     }
 
     useEffect(() => {
@@ -48,7 +47,6 @@ export default function Game(props) {
         setOpponentBoardState(props.opponentBoard);
     }, [props.board, props.opponentBoard, update, msg]);
     
-    console.log(opponentBoardState.board);
     return(
         <div>
             <p>{msg}</p>

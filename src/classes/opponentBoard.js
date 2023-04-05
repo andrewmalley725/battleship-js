@@ -22,10 +22,8 @@ class OpponentBoard extends Board {
             if (s.token === t && s.ShipLength > 0) {
                 if (s.ShipLength > 1) {
                     s.ShipLength -= 1;
-                    console.log(s.ShipLength);
                 } else {
                     s.ShipLength -= 1;
-                    console.log(s.ShipLength);
                 }
             }
         }
@@ -39,10 +37,8 @@ class OpponentBoard extends Board {
             if (s.token === t && s.ShipLength > 0) {
                 if (s.ShipLength > 1) {
                     msg = "HIT!";
-                    console.log(s.ShipLength);
                 } else {
                     msg = "You sunk my " + s.name + "!";
-                    console.log(s.ShipLength);
                 }
             }
         }
