@@ -1,0 +1,13 @@
+div{
+    font-size: 30px;
+    margin-top: 20%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
