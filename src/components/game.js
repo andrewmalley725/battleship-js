@@ -5,6 +5,7 @@ import '../css/main.css';
 export default function Game(props) {
     const [boardState, setBoardState] = useState(props.board);
     const [opponentBoardState, setOpponentBoardState] = useState(props.opponentBoard);
+    const [update, setUpdate] = useState(false);
 
     function handleClick(row, col, e) {
         let updatedOBoard = opponentBoardState;
@@ -25,7 +26,13 @@ export default function Game(props) {
             setBoardState(updatedBoard);
         }
         console.log(boardState);
+        setUpdate(!update);
     }
+
+    useEffect(() => {
+        setBoardState(props.board);
+        setOpponentBoardState(props.opponentBoard);
+    }, [props.board, props.opponentBoard, update]);
     
     return(
         <div>
