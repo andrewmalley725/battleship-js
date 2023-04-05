@@ -1,6 +1,6 @@
 {
   "name": "battleship-react",
-  "homepage": "http://andrewmalley725.github.io/battleship-js",
+  "homepage": "http://andrewmalley725.github.io/battleship-js/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
