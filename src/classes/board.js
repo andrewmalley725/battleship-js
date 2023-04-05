@@ -25,26 +25,33 @@ class Board {
     }
 
     reportHit(row, col) {
+        let msg = '';
         if (this.board[row][col] === 'X') {
-            console.log("\nYou already hit there, guess again\n");
+            msg = "You already hit there, guess again";
         } else {
             this.board[row][col] = 'X';
+            msg = 'HIT!'
         }
+        return msg;
     }
 
     reportMiss(row, col) {
+        let msg = '';
         if (this.board[row][col] === 'O') {
-            console.log("\nYou already guessed there, guess again\n");
+            msg = "You already guessed there, guess again"
         } else {
             if (this.numTrys === 1) {
-                console.log("\nOut of guesses, game over!\n");
+                msg = "Out of guesses, game over!";
+                this.board[row][col] = 'O'
                 this.numTrys--;
             } else {
-                console.log("\nMISS!\n");
+                msg = "MISS!";
                 this.board[row][col] = 'O';
                 this.numTrys--;
             }
         }
+
+        return msg;
     }
 }
 

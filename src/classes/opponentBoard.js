@@ -21,14 +21,32 @@ class OpponentBoard extends Board {
         for (const s of this.Ships) {
             if (s.token === t && s.ShipLength > 0) {
                 if (s.ShipLength > 1) {
-                    console.log("HIT!");
                     s.ShipLength -= 1;
+                    console.log(s.ShipLength);
                 } else {
-                    console.log("You sunk my " + s.name + "!");
                     s.ShipLength -= 1;
+                    console.log(s.ShipLength);
                 }
             }
         }
+    }
+
+    dShipOut(row,col)
+    {
+        const t = this.board[row][col];
+        let msg = '';
+        for (const s of this.Ships) {
+            if (s.token === t && s.ShipLength > 0) {
+                if (s.ShipLength > 1) {
+                    msg = "HIT!";
+                    console.log(s.ShipLength);
+                } else {
+                    msg = "You sunk my " + s.name + "!";
+                    console.log(s.ShipLength);
+                }
+            }
+        }
+        return msg;
     }
 
     gameOver() {
