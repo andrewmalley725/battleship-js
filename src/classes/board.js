@@ -3,7 +3,7 @@ class Board {
         this.board = new Array(length).fill(null).map(() => new Array(length).fill('*'));
         this.boardLength = length;
         this.token = '*';
-        this.numTrys = 8;
+        this.numTrys = 12;
     }
 
     printBoard() {
